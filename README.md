@@ -36,16 +36,16 @@ And then running on http://127.0.0.1:5000
 | Lasso Regression | 0.6958 | 5 |
 
 # Error Analysis
-- R2 được sử dụng cho quá trình đánh giá kết quả đầu ra, R2 cao hơn cho thấy kết quả tốt hơn.
-- Num_folds là số lần dữ liệu được chia thành train, test. Num_folds càng lớn cho thấy mô hình càng mạnh mẽ hơn.
-- Dựa vào kết quả trên, Linear Regression đạt được kết quả cao nhất với R2 Score (0.6959), kế đến là Ridge Regression (0.6873) và Lasso Regression (0.6958). Điều này cho thấy rằng, những mô hình này khá phù hợp cho việc dự đoán giá xe hơi.
-- Mô hình Random Forest Regression và Decision Tree (max_depth=2) có kết quả thấp nhất với R2 Score lần lượt là 0.1948, 0.1249. Điều này cho thấy những mô hình này không thích hợp với dữ liệu này. Ngoài ra Decision Tree (max_depth=5) đạt được 0.4119 cao hơn Random Forest nhưng lại thấp hơn Linear Regression.
+- R2 is used for evaluating the output results, a higher R2 indicates better results."
+- Num_folds is the number of times data is divided into train and test sets. A higher Num_folds indicates a stronger model.
+- Based on the results, Linear Regression achieved the highest R2 Score (0.6959), followed by Ridge Regression (0.6873) and Lasso Regression (0.6958). This shows that these models are quite suitable for predicting car prices.
+- The Random Forest Regression and Decision Tree (max_depth=2) models achieved the lowest results with R2 Scores of 0.1948 and 0.1249, respectively. This indicates that these models are not suitable for this dataset. Additionally, Decision Tree (max_depth=5) achieved 0.4119, higher than Random Forest but lower than Linear Regression.
 
-⇒ Nhìn chung, Linear Regression là lựa chọn tốt nhất cho bộ dữ liệu về dự đoán giá xe này. Tuy nhiên, Random Forest Regression có thể là lựa chọn tốt nếu mô hình less sensitive hơn với các outliers.
+⇒ In general, Linear Regression is the best choice for this car price prediction dataset. However, Random Forest Regression could be a good choice if the model is less sensitive to outliers.
 
 # Improvements
-- Loại bỏ các outliers trong dữ liệu
-- Tìm ra mối tương đồng giữa các đặc trưng cần thiết trong dữ liệu.
-- Sử dụng kỹ thuật Gradient Boosting, cụ thể là XGBoost, CatBoost, LightGBM.
-- Khai thác thêm một số đặc trưng cho quá trình training mô hình (Hiện tại là 6/15).
+- Remove outliers from the data.
+- Identify the similarity between the relevant features in the data.
+- Utilize the Gradient Boosting technique, specifically XGBoost, CatBoost, and LightGBM.
+- Explore additional features for the model training process (Currently 6 out of 15).
 
