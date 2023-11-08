@@ -6,6 +6,7 @@ https://github.com/truong11062002/vucar_homework_assignment/assets/74360292/ed9c
 # Setup env
 ```
 git clone https://github.com/truong11062002/vucar_homework_assignment.git
+cd vucar_homework_assignment
 conda create --name <your_env>
 conda activate <your_env>
 conda install pip
