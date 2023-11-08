@@ -6,8 +6,8 @@ import numpy as np
 
 app=Flask(__name__)
 cors=CORS(app)
-main_model = pickle.load(open('./models/lr.pkl','rb'))
-car=pd.read_csv('./data/cleaned_car_v2.csv')
+main_model = pickle.load(open('./models/XGBReg.pkl','rb'))
+car=pd.read_csv('./data/cleaned_car_v3.csv')
 
 @app.route('/',methods=['GET','POST'])
 def index():
@@ -17,9 +17,17 @@ def index():
     fuel_type = sorted(car['fuel'].unique())
     condition = sorted(car['condition'].unique())
     type_car = sorted(car['type_car'].unique())
+    mileage_v2 = sorted(car['mileage_v2'].unique())
     
     companies.insert(0,'Select Company')
-    return render_template('index.html',companies=companies, car_models=car_models, years=years,fuel_types=fuel_type, condition=condition, type_car=type_car)
+    return render_template('index.html',
+                           companies=companies, 
+                           car_models=car_models,
+                           years=years,
+                           fuel_types=fuel_type, 
+                           condition=condition, 
+                           type_car=type_car, 
+                           mileage_v2=mileage_v2)
 
 
 @app.route('/predict',methods=['POST'])
