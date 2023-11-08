@@ -1,5 +1,7 @@
 # Introduction
 The objective of this project is to forecast the price of a pre-owned automobile by considering factors such as the manufacturer's name, model name, and various other parameters.
+# Demo
+https://github.com/truong11062002/vucar_homework_assignment/assets/74360292/ed9c3b78-9012-48ad-bbf8-88f546a5741a
 
 # Setup env
 ```
