@@ -20,3 +20,4 @@ sklearn==0.0.post11
 threadpoolctl==3.2.0
 tzdata==2023.3
 Werkzeug==3.0.1
+xgboost==2.0.1
