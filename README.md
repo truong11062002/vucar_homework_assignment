@@ -1,5 +1,43 @@
 # Introduction
 The objective of this project is to forecast the price of a pre-owned automobile by considering factors such as the manufacturer's name, model name, and various other parameters.
+
+- **Modeling:**
+    - How well does your model perform?
+        - Mô hình hồi quy XGBoost hoạt động tốt nhất trong số các mô hình được cung cấp. Nó có điểm R2 cao nhất, nghĩa là nó phù hợp nhất với dữ liệu trong thế giới thực. Ngoài ra, nó có giá trị MAE và RMSE thấp nhất, cho thấy dự đoán của nó nhìn chung chính xác hơn.
+    - How effective is the selected metric in evaluating model performance?
+        - R2 Score, MAE và RMSE đều chỉ ra rằng Hồi quy XGBoost là mô hình hoạt động tốt nhất. Điều này cho thấy các số liệu đã chọn có hiệu quả trong việc đánh giá hiệu suất của mô hình cho bài toán dự đoán giá xe.
+
+
+    | Metric | Strengths | Weaknesses |
+    | --- | --- | --- |
+    | R2 score | Cho biết mức độ phù hợp của mô hình với dữ liệu | Không nhạy cảm với outlier, nếu thêm các đặc trưng không liên quan vẫn được đánh giá tốt  |
+    | MAE | Độ đo hiệu suất của mô hình tốt hơn R2 Score, ít nhạy cảm hơn với các outliers | Không cung cấp thông tin về hướng của lỗi |
+    | RMSE | Độ đo tốt hơn MAE, Vì nó phạt các giá trị error nặng hơn. | Nhạy cảm hơn với các giá trị outliers |
+    - How could your model be improved?
+        - **Feature engineering**: Tạo đặc trưng mới từ các đặc trưng hiện có hoặc chuyển đổi các đặc trưng hiện có để làm cho chúng có nhiều thông tin hơn cho mô hình.
+        - **Data Cleaning**: Loại bỏ hoặc fill các giá trị bị thiếu, xử lý các giá trị ngoại lệ và chuẩn hóa các đặc trưng để đảm bảo chúng ở scale tương tự.
+        - Tìm thêm nhiều mô hình khác nhau để thử nghiệm.
+        - **Hyperparameter tuning**: Tinh chỉnh tham số của mô hình để tối ưu hoá hiệu suất của chúng.
+        - **Ensample Methods**: Kết hợp nhiều mô hình thành một mô hình tổng hợp để cải thiện hiệu suất tổng thể (bagging và boosting).
+        - Cải thiện khả năng của mô hình trong việc nắm bắt các mối quan hệ và mẫu phức tạp trong dữ liệu.
+        - **Cross-validation**: Đánh giá hiệu suất của mô hình trên các tập hợp con dữ liệu khác nhau và tránh bị overfitting.
+        - Phân tích tầm quan trọng của các đặc trưng.
+  
+- **Backend:**
+  - Present my idea for db car price prediction:
+      - Bảng Cars chứa các FK của những bảng liên quan giúp dễ quản lý và truy vấn thông tin.
+      - Các bảng origin, type, gearbox type, fuel type, color, condition để dễ dàng chuẩn hóa dữ liệu và giảm sự dư thừa.
+      - Mỗi table được ref đều chứa ID riêng biệt và mô tả cho nó, giúp dễ dàng quản lý và truy vấn dữ liệu liên quan.
+      - Các FK được liên kết với bảng Car do đó sẽ đảm bảo được tính toàn vẹn dữ liệu. Dễ dàng ngăn chặn các thông tin sai lệch từ người dùng.
+      - Điều này có lợi cho các truy vấn và phân tích liên quan đến giá xe và các thuộc tính của chúng.
+  - How robust and efficient is the backend system you develop?
+      - **Chất lượng của dữ liệu** được sử dụng để huấn luyện và thử nghiệm mô hình dự đoán là rất quan trọng. Dữ liệu chất lượng cao, sạch sẽ và cập nhật mới nhất sẽ dẫn đến những dự đoán chính xác hơn.
+      - Việc lựa chọn và thiết kế đặc trưng (feature) được sử dụng trong mô hình dự đoán có thể tác động đáng kể đến hiệu suất của nó. Các đặc trưng liên quan, chẳng hạn như thông số kỹ thuật của xe, xu hướng thị trường và dữ liệu lịch sử về giá, cần được lựa chọn cẩn thận.
+      - Việc lựa chọn thuật toán machine learning có thể ảnh hưởng đến hiệu quả và độ chính xác của hệ thống.
+      - Mô hình phải được đánh giá bằng các số liệu thích hợp, chẳng hạn như sai số bình phương trung bình (MSE) hoặc sai số tuyệt đối trung bình (MAE), để đánh giá độ chính xác và độ tin cậy của nó.
+      - Xử lý lượng dữ liệu và lưu lượng truy cập ngày càng tăng một cách hiệu quả (Cloud).
+      - Bảo trì và giám sát: Các mô hình có thể cần được đào tạo lại định kỳ khi dữ liệu phát triển.
+      - Khả năng diễn giải của mô hình, đặc biệt là các trường hợp dự đoán có thể gây ra hậu quả đáng kể.
 # Demo
 https://github.com/truong11062002/vucar_homework_assignment/assets/74360292/ed9c3b78-9012-48ad-bbf8-88f546a5741a
 
