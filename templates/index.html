@@ -81,10 +81,12 @@
                             <option value="{{ type }}">{{ type }}</option>
                             {% endfor %}
                     </div>
+                
                     <div class="col-md-10 form-group" style="text-align: center">
                         <label><b>Enter the Number of Kilometres that the car has travelled:</b> </label><br>
+                    
                         <input type="text" class="form-control" id="kilo_driven" name="kilo_driven"
-                               placeholder="Enter the kilometres driven ">
+                               placeholder="Enter the kilometres driven " style="margin-top: 35px">
                     </div>
                     <div class="col-md-10 form-group" style="text-align: center">
                         <button  class="btn btn-primary form-control" onclick="send_data()">Predict Price</button>

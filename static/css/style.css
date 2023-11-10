@@ -1,8 +1,9 @@
-.{
+/* .{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
+.{margin: 0;padding: 0;box-sizing: border-box;}
 .bg-dark{
 	background-color: #75767B;
 }
@@ -12,5 +13,8 @@
 	margin-top: 50px;
 }
 #canvas{
+    border: 2px solid black;
+}
+#canvas2{
     border: 2px solid black;
 }
