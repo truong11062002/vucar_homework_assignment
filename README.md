@@ -9,13 +9,19 @@ The objective of this project is to forecast the price of a pre-owned automobile
         - MAE measures the average absolute difference between the predicted and actual values. It is a more robust measure of model performance than R2 score, as it is less sensitive to outliers. However, MAE does not provide any information about the direction of the errors.
         - RMSE measures the average squared difference between the predicted and actual values. It is a more sensitive measure of model performance than MAE, as it penalizes large errors more heavily. However, RMSE is also more sensitive to outliers.
         - R2 score, MAE, and RMSE all indicate that XGBoost Regression is the best-performing model. This suggests that the selected metrics are effective in evaluating model performance for this particular task.
+---------------
 
 
-    | Metric | Strengths | Weaknesses |
-    | --- | --- | --- |
-    | R2 score | Good indicator of how well the model fits the data | Not sensitive to outliers, can be artificially inflated by including irrelevant features  |
-    | MAE | More robust measure of model performance than R2 score, less sensitive to outliers | Does not provide any information about the direction of the errors |
-    | RMSE | More sensitive measure of model performance than MAE, penalizes large errors more heavily. | More sensitive to outliers |
+
+
+| Metric   | Strengths                                                                                  | Weaknesses                                                                               |
+|:-------- | ------------------------------------------------------------------------------------------ |:---------------------------------------------------------------------------------------- |
+| R2 score | Good indicator of how well the model fits the data                                         | Not sensitive to outliers, can be artificially inflated by including irrelevant features |
+| MAE      | More robust measure of model performance than R2 score, less sensitive to outliers         | Does not provide any information about the direction of the errors                       |
+| RMSE     | More sensitive measure of model performance than MAE, penalizes large errors more heavily. | More sensitive to outliers                                                               |
+
+-----------
+- **Modeling:**
     - How could your model be improved?
         - **Feature engineering**: Creating new features from existing ones or transforming existing features to make them contain more information for the model.
         - **Data Cleaning**: Removing or filling missing values, handling outliers, and standardizing features to ensure they are on a similar scale.
@@ -24,7 +30,7 @@ The objective of this project is to forecast the price of a pre-owned automobile
         - **Ensample Methods**: Combining multiple models into an aggregated model to improve overall performance (e.g., bagging and boosting).
         - **Cross-validation**: Evaluating the model's performance on different subsets of data and avoiding overfitting.
         - Analyzing the importance of features. Enhancing the model's ability to capture complex relationships and patterns in the data.
-  
+---------
 - **Backend:**
   - How robust and efficient is the backend system you develop?
       - **Data quality** used for training and testing predictive models is very important. High-quality, clean, and up-to-date data leads to more accurate predictions.
